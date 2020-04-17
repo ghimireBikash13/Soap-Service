@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.cubic.com/movies"
+	xmlns:tns="http://www.cubic.com/movies"
+	elementFormDefault="qualified">
+	
+	 <element name="MovieRequest">
+        <complexType>
+            <sequence>
+                <element name="Movie" type="tns:Movie"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="MovieResponse">
+        <complexType>
+          <sequence>
+			<element   name="code" type="int" minOccurs="1" maxOccurs="1"/> 	  
+			<element   name="message" type="string" minOccurs="1" maxOccurs="1"/>
+	  </sequence>
+	  </complexType>
+    </element>
+	
+	<complexType name="Movie">
+	  <sequence>
+			<element   name="mid" type="int" minOccurs="1" maxOccurs="1"/> 	  
+			<element   name="name" type="string" minOccurs="1" maxOccurs="1"/>
+			<element   name="year" type="int" minOccurs="1" maxOccurs="1"/>
+			<element   name="director" type="string" minOccurs="1" maxOccurs="2"/>
+			<element   name="poster" type="string" minOccurs="0" maxOccurs="1"/>
+			<element   name="price" type="double" minOccurs="1" maxOccurs="1"/>
+			<element   name="doe" type="dateTime" minOccurs="1" maxOccurs="1"/>
+	  </sequence>
+	</complexType>
+	
+</schema>
