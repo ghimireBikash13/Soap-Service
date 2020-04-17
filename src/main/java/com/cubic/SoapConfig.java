@@ -14,6 +14,11 @@ import org.springframework.xml.xsd.XsdSchema;
 
 @EnableWs
 @Configuration
+/**
+ * 
+ * @author delep
+ *
+ */
 public class SoapConfig extends WsConfigurerAdapter {
 	
 	//MessageDispatcherServlet is used to publish your web service
